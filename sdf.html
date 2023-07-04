@@ -1,0 +1,39 @@
+<html>
+<head>
+  <div class="container">
+    <nav>
+        <a class="active" href="home.html">Home</a>
+        <a href="elements.html">Add/Remove Elements</a>
+        <a href="sdf.html">Upload SDF</a>
+        <a href="select.html">Select Molecule</a>
+        <a href="display.html">View Molecule</a>
+    </nav>
+</div>
+    <title> Upload SDF File </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"> </script>
+    <script src="sdf.js" />
+    </script>
+    <link rel="stylesheet" type="text/css" href="elements.css" />
+</head>
+
+<body>
+    <h1> Upload SDF Files </h1>
+    <form action="/uploadsdf" name="/uploadsdf" enctype="multipart/form-data" method="post">
+      <fieldset>
+        <legend></legend>
+        <p>
+          <label for="filename">Enter molecule name:</label>
+          <input type="text" name="mol-name" id="mol-name" placeholder="e.g. water" required>
+        </p>
+        <p>
+            <input type="file" id="sdf-file" name="sdf-file"/>
+        </p>
+        <p>
+          <button type="submit" name="submit_sdf" id="submit_sdf">Upload</button>
+        </p>
+</fieldset>
+    </form>
+</body>
+
+
+</html>

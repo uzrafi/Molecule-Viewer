@@ -1,0 +1,69 @@
+<html>
+
+<head>
+  <div class="container">
+    <nav>
+        <a class="active" href="home.html">Home</a>
+        <a href="elements.html">Add/Remove Elements</a>
+        <a href="sdf.html">Upload SDF</a>
+        <a href="select.html">Select Molecule</a>
+        <a href="display.html">View Molecule</a>
+    </nav>
+</div>
+    <title> Add/Remove Elements </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"> </script>
+    <script src="elements.js" />
+    </script>
+    <link rel="stylesheet" type="text/css" href="elements.css" />
+</head>
+
+<body>
+    <h1> Add/Remove Elements </h1>
+    <form action="input_handler.html" id="input_handler.html" method="post">
+      <fieldset>
+        <legend>Add Element</legend>
+        <p>
+          <label for="elementNum">Element Number:</label>
+          <input type="number" name="elementNum" id="elementNum" placeholder="e.g. 1" min="1" required>
+        </p>
+        <p>
+          <label for="elementCode">Element Code:</label>
+          <input type="text" id="elementCode" name="elementCode" placeholder="e.g. C" required>
+        </p>
+        <p>
+          <label for="elementName">Element Name:</label>
+          <input type="text" id="elementName" name="elementName" placeholder="e.g. Carbon" required>
+        </p>
+        <p>
+          <label for="color1">Colour 1:</label>
+          <input type="color" id="color1" name="color1" value="#000000" required>
+        </p>
+        <p>
+          <label for="color2">Colour 2:</label>
+          <input type="color" id="color2" name="color2" value="#000000" required>
+        </p>
+        <p>
+          <label for="color3">Colour 3:</label>
+          <input type="color" id="color3" name="color3" value="#000000" required>
+        </p>
+        <p>
+          <label for="radius">Radius:</label>
+          <input type="number" id="radius" name="radius" placeholder="e.g. 70" min="1" required>
+        </p>
+        <p>
+          <button type="submit" name="addElement" id="addElement">Add Element</button>
+        </p>
+</fieldset>
+        <h2> Remove Element </h2>
+        <p>
+            <label for="removeElementName">Element Name:</label>
+            <input type="text" id="removeElementName" name="removeElementName" placeholder="E.g. Oxygen" required/>
+        </p>
+        <p>
+            <label for="removeElement">Remove Element:</label>
+            <input type="submit" id="removeElement" name="removeElement" value="Remove Element" />
+        </p>
+    </form>
+</body>
+
+</html>
